@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示 - Cheng</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#f8f8f4] text-stone-800 font-serif antialiased">
+
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-stone-900 hover:text-stone-600 transition-colors">Cheng</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">主页</a>
+                    <a href="research.html" class="nav-link">研究报告</a>
+                    <a href="projects.html" class="nav-link">项目展示</a>
+                    <a href="tools.html" class="nav-link">工具严选</a>
+                    <a href="about_me.html" class="nav-link">了解我</a>
+                    <a href="https://www.xiaohongshu.com/user/profile/6090b81b0000000001002163" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center">小红书<i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-stone-800">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+            <div id="nav-menu" class="md:hidden bg-white/90 backdrop-blur-sm">
+                <a href="index.html" class="block py-3 px-6 text-center nav-link">主页</a>
+                <a href="research.html" class="block py-3 px-6 text-center nav-link">研究报告</a>
+                <a href="projects.html" class="block py-3 px-6 text-center nav-link">项目展示</a>
+                <a href="tools.html" class="block py-3 px-6 text-center nav-link">工具严选</a>
+                <a href="about_me.html" class="block py-3 px-6 text-center nav-link">了解我</a>
+                <a href="https://www.xiaohongshu.com/user/profile/6090b81b0000000001002163" target="_blank" rel="noopener noreferrer" class="block py-3 px-6 text-center nav-link flex items-center justify-center">小红书<i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i></a>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-6 py-16 md:py-24">
+            <h1 class="text-4xl font-bold text-center mb-4">项目展示</h1>
+            <p class="text-center text-stone-500 mb-12">从构思到实践的创造之旅</p>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <a href="https://www.coze.cn/store/agent/7511242139696349194?bot_id=true&bid=6ginipvr06g12" target="_blank" rel="noopener noreferrer" class="block bg-white/90 p-8 rounded-lg border border-stone-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group text-center">
+                    <img src="https://r2.flowith.net/files/o/1749742994047-ai_news_weekly_icon_design_index_0@1024x1024.png" alt="AI新闻周报 图标" class="w-24 h-24 mb-6 rounded-lg object-cover mx-auto transition-transform duration-300 group-hover:scale-105">
+                    <h3 class="text-xl font-bold text-stone-800">AI新闻周报</h3>
+                    <p class="text-stone-500 mt-2 flex items-center justify-center text-sm">
+                        查看项目 <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </p>
+                </a>
+
+                <a href="https://www.coze.cn/store/agent/7510960106113581097?bot_id=true&bid=6ginirku47019" target="_blank" rel="noopener noreferrer" class="block bg-white/90 p-8 rounded-lg border border-stone-200/80 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group text-center">
+                    <img src="https://r2.flowith.net/files/o/1749742987151-ai_creativity_text_generation_icon_design_index_1@1024x1024.png" alt="提示词生成助手 图标" class="w-24 h-24 mb-6 rounded-lg object-cover mx-auto transition-transform duration-300 group-hover:scale-105">
+                    <h3 class="text-xl font-bold text-stone-800">提示词生成助手</h3>
+                    <p class="text-stone-500 mt-2 flex items-center justify-center text-sm">
+                        查看项目 <i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i>
+                    </p>
+                </a>
+            </div>
+        </main>
+
+        <footer class="bg-white/50 border-t border-stone-200/50 mt-auto">
+            <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-sm text-stone-500 mb-4 md:mb-0">&copy; 2025 All Rights Reserved.</p>
+                <img src="https://r2.flowith.net/files/o/1749715158854-classic_chinese_seal_with_authentic_stone_texture_index_2@1024x1024.png" alt="Cheng Seal" class="h-16 w-16 opacity-80">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

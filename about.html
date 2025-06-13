@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解我 - 水墨风个人网站</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#f8f8f4] text-stone-800 font-serif antialiased">
+
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-stone-900 hover:text-stone-600 transition-colors">诚</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">主页</a>
+                    <a href="research.html" class="nav-link">研究报告</a>
+                    <a href="projects.html" class="nav-link">项目展示</a>
+                    <a href="about.html" class="nav-link">了解我</a>
+                    <a href="experience.html" class="nav-link">个人经历</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-stone-800">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+            <div id="nav-menu" class="md:hidden bg-white/90 backdrop-blur-sm">
+                <a href="index.html" class="block py-3 px-6 text-center nav-link">主页</a>
+                <a href="research.html" class="block py-3 px-6 text-center nav-link">研究报告</a>
+                <a href="projects.html" class="block py-3 px-6 text-center nav-link">项目展示</a>
+                <a href="about.html" class="block py-3 px-6 text-center nav-link">了解我</a>
+                <a href="experience.html" class="block py-3 px-6 text-center nav-link">个人经历</a>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-6 py-16 md:py-24">
+            <h1 class="text-4xl font-bold text-center mb-4">了解我</h1>
+            <div class="w-24 h-1 bg-stone-300 mx-auto mb-12"></div>
+            
+            <div class="max-w-4xl mx-auto space-y-12">
+                <section>
+                    <h2 class="section-title">个人简介</h2>
+                    <p class="leading-relaxed text-stone-700 text-center max-w-prose mx-auto">我是Cheng，一位热衷于人工智能研究的技术探索者，同时也是传统文化的深度爱好者。 在现代科技与古典文化的交融中，我寻找着独特的创新灵感。</p>
+                </section>
+
+                <hr class="ink-divider">
+
+                <section>
+                    <h2 class="section-title">教育背景</h2>
+                     <p class="leading-relaxed text-stone-700 text-center"><strong>计算机科学硕士</strong>, 斯坦福大学, 2020 - 2022<br><strong>数字媒体艺术学士</strong>, 清华大学, 2016 - 2020</p>
+                </section>
+                
+                <hr class="ink-divider">
+
+                <section>
+                    <h2 class="section-title">专业技能</h2>
+                    <p class="max-w-prose mx-auto text-center text-stone-600 mb-8 -mt-2">我的技术栈横跨前后两端，亦在设计领域有所涉猎，力求在数字创作中实现技艺合一。</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 text-stone-700 text-center">
+                        <div><strong class="font-semibold block">前端:</strong> JavaScript, TypeScript, React, Vue</div>
+                        <div><strong class="font-semibold block">后端:</strong> Node.js, Python, Go, SQL, NoSQL</div>
+                        <div><strong class="font-semibold block">设计:</strong> UI/UX, 平面设计, 3D建模</div>
+                        <div><strong class="font-semibold block">其他:</strong> WebGL, 数据可视化, 机器学习</div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="bg-white/50 border-t border-stone-200/50 mt-auto">
+            <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-sm text-stone-500 mb-4 md:mb-0">&copy; 2025 All Rights Reserved.</p>
+                <img src="https://r2.flowith.net/files/o/1749715158854-classic_chinese_seal_with_authentic_stone_texture_index_2@1024x1024.png" alt="诚字印章" class="h-16 w-16 opacity-80">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

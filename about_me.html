@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解我 - Cheng</title>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-[#f8f8f4] text-stone-800 font-serif antialiased">
+
+    <div class="flex flex-col min-h-screen">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-stone-200/50">
+            <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-stone-900 hover:text-stone-600 transition-colors">Cheng</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link">主页</a>
+                    <a href="research.html" class="nav-link">研究报告</a>
+                    <a href="projects.html" class="nav-link">项目展示</a>
+                    <a href="tools.html" class="nav-link">工具严选</a>
+                    <a href="about_me.html" class="nav-link">了解我</a>
+                    <a href="https://www.xiaohongshu.com/user/profile/6090b81b0000000001002163" target="_blank" rel="noopener noreferrer" class="nav-link flex items-center">小红书<i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i></a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-stone-800">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </nav>
+            <div id="nav-menu" class="md:hidden bg-white/90 backdrop-blur-sm">
+                <a href="index.html" class="block py-3 px-6 text-center nav-link">主页</a>
+                <a href="research.html" class="block py-3 px-6 text-center nav-link">研究报告</a>
+                <a href="projects.html" class="block py-3 px-6 text-center nav-link">项目展示</a>
+                <a href="tools.html" class="block py-3 px-6 text-center nav-link">工具严选</a>
+                <a href="about_me.html" class="block py-3 px-6 text-center nav-link">了解我</a>
+                <a href="https://www.xiaohongshu.com/user/profile/6090b81b0000000001002163" target="_blank" rel="noopener noreferrer" class="block py-3 px-6 text-center nav-link flex items-center justify-center">小红书<i data-lucide="arrow-up-right" class="w-4 h-4 ml-1"></i></a>
+            </div>
+        </header>
+
+        <main class="flex-grow container mx-auto px-6 py-16 md:py-24">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-bold text-center mb-12 text-stone-900">关于我</h1>
+                <div class="prose lg:prose-xl max-w-none text-stone-700">
+                    <p>我是Cheng，一位热衷于人工智能研究的技术探索者，同时也是传统文化的深度爱好者。 在现代科技与古典文化的交融中，我寻找着独特的创新灵感。</p>
+                    
+                    <hr class="ink-divider">
+
+                    <h2 class="text-3xl font-bold text-stone-800">核心技能</h2>
+                    <ul>
+                        <li><strong>AI技术应用:</strong> 精通Coze、Cursor等无代码/低代码平台，熟练运用ChatGPT、Sora等各类AI产品，能够独立构建和部署AI Agent解决实际业务问题。</li>
+                        <li><strong>数据分析与可视化:</strong> 熟练使用Excel进行复杂数据处理（函数、数据透视图），擅长运用PPT进行商业演示，并有使用Wind、Bloomberg等金融数据平台的经验。</li>
+                        <li><strong>技术与编程:</strong> 掌握Python编程语言，具备网页爬虫和视频抓包爬取能力。</li>
+                    </ul>
+
+                    <hr class="ink-divider">
+
+                    <h2 class="text-3xl font-bold text-stone-800">工作与项目经历</h2>
+
+                    <h3 class="text-2xl font-bold mt-8 mb-2">财水险公估师 | 泛华保险公估股份有限公司 &amp; 民太安保险公估有限公司 <br><span class="text-lg font-normal text-stone-600">(2024.4 - 2025.5)</span></h3>
+                    <p>作为文科背景员工，通过自主学习成功主导AI自动化项目：</p>
+                    <ul>
+                        <li><strong>家电理赔智能助手 (AI Agent)：</strong>运用Coze平台构建5000+案例智能知识库，集成图片识别与报告自动生成功能。定损时间从4小时压缩至30分钟，效率提升87.5%，准确率提升20%。</li>
+                    </ul>
+
+                    <h3 class="text-2xl font-bold mt-8 mb-2">分析师助理 | 中信证券 <br><span class="text-lg font-normal text-stone-600">(2023.7 - 2024.1)</span></h3>
+                    <p>展现优秀的独立研究与分析能力：</p>
+                    <ul>
+                        <li><strong>苏宁、恒大违约分析专题研究：</strong>担任6人小组组长，运用波特五力模型、PEST等分析框架，通过10+权威数据源交叉验证，深度挖掘企业经营风险。研究成果获领导认可并荣获二等奖。</li>
+                    </ul>
+                    
+                    <h3 class="text-2xl font-bold mt-8 mb-2">辅导员助理 | 浙江财经大学东方学院 <br><span class="text-lg font-normal text-stone-600">(2020.11 - 2023.7)</span></h3>
+                    <p>通过系统管理锻炼领导力与组织能力：</p>
+                    <ul>
+                        <li>制定带教计划帮助5名新人快速上岗，试用期考核通过率100%。</li>
+                        <li>搭建"问题分级响应机制"，高效统筹解决400+学生事务，显著提升服务质量。</li>
+                    </ul>
+
+                    <hr class="ink-divider">
+
+                    <h2 class="text-3xl font-bold text-stone-800">独立AI项目</h2>
+                    <h3 class="text-2xl font-bold mt-8 mb-2">AI周报自动化Agent</h3>
+                    <p>为解决行业资讯收集与整理的耗时问题，我独立设计并实现了一个AI周报自动化项目。</p>
+                    <ul>
+                        <li><strong>技术实现：</strong> 基于Coze平台构建智能Agent，打造了从"信息采集 -> 内容提取 -> 智能总结 -> 定时推送"的完整自动化流程。</li>
+                        <li><strong>项目成效：</strong> 实现了对AIBase等多个行业资讯平台信息的精准抓取与处理，将周报制作工作完全自动化。每周五通过飞书平台定时推送，信息处理效率提升超过<strong>90%</strong>，成功将AI技术转化为实用的生产力工具。</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-white/50 border-t border-stone-200/50 mt-auto">
+            <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-sm text-stone-500 mb-4 md:mb-0">&copy; 2025 All Rights Reserved.</p>
+                <img src="https://r2.flowith.net/files/o/1749715158854-classic_chinese_seal_with_authentic_stone_texture_index_2@1024x1024.png" alt="Cheng Seal" class="h-16 w-16 opacity-80">
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
