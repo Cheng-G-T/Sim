@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const page = path.split('/').pop();
         if (page === 'suning_report.html' || page === 'evergrande_report.html') {
             const mdFile = page === 'suning_report.html' 
-                ? 'suning_summary.md' 
-                : 'evergrande_summary.md';
+                ? 'suning_default_risk_analysis.md' 
+                : 'evergrande_industry_competitive_analysis_using_porters_five_forces.md';
             
             fetch(mdFile)
                 .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
