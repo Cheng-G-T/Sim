@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const page = path.split('/').pop();
         if (page === 'suning_report.html' || page === 'evergrande_report.html') {
             const mdFile = page === 'suning_report.html' 
-                ? 'suning_default_risk_analysis.md' 
-                : 'evergrande_industry_competitive_analysis_using_porters_five_forces.md';
+                ? 'suning_summary.md' 
+                : 'evergrande_summary.md';
             
             fetch(mdFile)
                 .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
@@ -112,11 +112,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.addEventListener('click', (e) => {
         const anchor = e.target.closest('a');
-        if (anchor && anchor.hostname === window.location.hostname && anchor.target !== '_blank') {
+
+        // Ensure it's a valid, internal, non-download link
+        if (anchor && anchor.href && anchor.origin === window.location.origin && !anchor.hasAttribute('download') && anchor.target !== '_blank') {
             e.preventDefault();
-            const path = anchor.getAttribute('href');
-            if (window.location.pathname !== path) {
-                navigate(path);
+            const targetUrl = anchor.href;
+
+            // Only navigate if the destination is different
+            if (targetUrl !== window.location.href) {
+                navigate(targetUrl);
             }
         }
     });
