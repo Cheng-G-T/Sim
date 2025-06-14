@@ -63,21 +63,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const handlePageSpecificScripts = (path) => {
         const page = path.split('/').pop();
-        if (page === 'suning_report.html' || page === 'evergrande_report.html') {
-            const mdFile = page === 'suning_report.html' 
-                ? 'suning_default_risk_analysis.md' 
-                : 'evergrande_industry_competitive_analysis_using_porters_five_forces.md';
-            
-            fetch(mdFile)
+        
+        let contentToLoad = '';
+        if (page === 'suning_report.html') {
+            contentToLoad = 'suning_report_content.html';
+        } else if (page === 'evergrande_report.html') {
+            contentToLoad = 'evergrande_report_content.html';
+        }
+
+        if (contentToLoad) {
+            fetch(contentToLoad)
                 .then(response => response.ok ? response.text() : Promise.reject('Network response was not ok'))
-                .then(markdown => {
-                    if (window.marked) {
-                        document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+                .then(text => {
+                    const contentDiv = document.getElementById('markdown-content');
+                    if (contentDiv) {
+                        if (contentToLoad.endsWith('.md') && window.marked) {
+                            contentDiv.innerHTML = marked.parse(text);
+                        } else {
+                            contentDiv.innerHTML = text;
+                        }
                     }
                 })
                 .catch(error => {
-                    console.error('Error fetching or parsing markdown:', error);
-                    document.getElementById('markdown-content').innerHTML = '<p class="text-red-600 text-center">无法加载报告内容，请稍后再试。</p>';
+                    console.error('Error fetching content:', error);
+                    const contentDiv = document.getElementById('markdown-content');
+                    if(contentDiv) {
+                        contentDiv.innerHTML = '<p class="text-red-600 text-center">无法加载报告内容，请稍后再试。</p>';
+                    }
                 });
         }
     };
