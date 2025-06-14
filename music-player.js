@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const pauseIcon = document.getElementById('pause-icon');
 
     if (audio && musicToggleBtn && playIcon && pauseIcon) {
+        // Explicitly load the audio for better Safari/iOS compatibility
+        audio.load();
+        
         const updateIcons = (isPlaying) => {
             if (isPlaying) {
                 playIcon.classList.add('hidden');
