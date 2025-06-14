@@ -57,14 +57,6 @@ document.addEventListener('DOMContentLoaded', () => {
         
         audio.addEventListener('play', () => updateIcons(true));
         audio.addEventListener('pause', () => updateIcons(false));
-        
-        const playPromise = audio.play();
-        if (playPromise !== undefined) {
-            playPromise.catch(error => {
-                console.log("Autoplay was prevented. User interaction is required.");
-                updateIcons(false);
-            });
-        }
     }
 
     if (typeof lucide !== 'undefined') {
